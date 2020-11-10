@@ -1,0 +1,26 @@
+package stringReversal;
+import java.util.*;
+
+public class reversal {
+public static void main(String []args)
+{
+	String original, reverse,wordafter = "";
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("Enter a string");
+    original = in.nextLine();
+
+    int length = original.length();
+    int sections=length/4;
+    
+    for(int j=0;j<=sections;j++)
+    {
+    	  for (int i = j ; i >= 0 ; i--)
+    		  wordafter = wordafter + original.charAt(i);
+    }
+    
+    
+    System.out.println("Reverse of the string: " + wordafter);
+    
+}
+}

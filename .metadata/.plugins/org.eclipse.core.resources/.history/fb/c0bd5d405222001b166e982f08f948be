@@ -1,0 +1,23 @@
+package missingInteger;
+import java.util.*;
+
+public class integer {
+	 
+	public static void main(String []args)
+	{
+		   int size, number;
+		    Scanner in = new Scanner(System.in);
+
+		    System.out.println("how many values do you want to input");
+		    size = Integer.parseInt(in.nextLine());
+		   
+		    int[] array = new int[size];
+		    for(int i=0;i<size;i++) {
+		    	int j=i+1;
+		    	  System.out.println("input "+ " number:"+ j);
+		    	  
+				    array[i] = Integer.parseInt(in.nextLine());
+		    }
+		    System.out.println("the array is :"+ array[1]); 
+	}
+}

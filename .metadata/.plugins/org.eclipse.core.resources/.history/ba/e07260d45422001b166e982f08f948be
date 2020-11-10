@@ -1,0 +1,38 @@
+package missingInteger;
+import java.util.*;
+
+public class integer {
+	 
+	public static void main(String []args)
+	{
+		   int size, number;
+		    Scanner in = new Scanner(System.in);
+
+		    System.out.println("how many values do you want to input");
+		    size = Integer.parseInt(in.nextLine());
+		   
+		    int[] array = new int[size];
+		    for(int i=0;i<size;i++) {
+		    	int j=i+1;
+		    	  System.out.println("input number:"+j);
+		    	  
+				    array[i] = Integer.parseInt(in.nextLine());
+		    }
+		    for(int k=0;k<size;k++) {
+		    	
+		    	for(int l=k;l<size-1;l++) {
+		    		if(array[l]>array[l+1]) {
+		    			int temp=array[l];
+		    			array[l]=array[l+1];
+		    			array[l+1]=temp;
+		    		}
+		    	}
+		    	
+		    }
+		    
+		    
+		    
+		    
+		    System.out.println("the array is :"+ array[4]); 
+	}
+}

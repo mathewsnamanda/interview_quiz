@@ -1,0 +1,63 @@
+package missingInteger;
+import java.util.*;
+
+public class integer {
+	 
+	public static void main(String []args)
+	{
+		   int size, number;
+		    Scanner in = new Scanner(System.in);
+
+		    System.out.println("how many values do you want to input");
+		    size = Integer.parseInt(in.nextLine());
+		   //setting array size by user
+		    int[] array = new int[size];
+		    int[] comparerarray = new int[size];
+		    
+		    //setting values for the camperer array
+		    for(int q=0;q<size;q++) {
+		    	comparerarray[q]=q+1;
+		    }
+		    
+		    
+		    //inputing into array of size
+		    for(int i=0;i<size;i++) {
+		    	int j=i+1;
+		    	  System.out.println("input number:"+j);
+		    	  
+				    array[i] = Integer.parseInt(in.nextLine());
+		    }
+		    
+		    //sorting array in ascending order
+		    for(int k=0;k<size;k++) {
+		    	
+		    	for(int l=0;l<size-1;l++) {
+		    		if(array[l]>array[l+1]) {
+		    			int temp=array[l];
+		    			array[l]=array[l+1];
+		    			array[l+1]=temp;
+		    		}
+		    	}
+		    	
+		    }
+		    for(int z=0;z<size;z++) {
+		    	 System.out.println(array[z]);	
+		    }
+		  
+		   int p=0;
+		    //searching missing integer
+		    for(int z=0;z<size;z++) {
+		    	
+		    		if(array[z]!=comparerarray[z])
+			    	{
+			    		p=comparerarray[z];
+			    		z=size-1;
+			    	}
+		    	
+		
+	}
+		    System.out.println("missing integer: " + p);	
+		
+		 
+	}
+}

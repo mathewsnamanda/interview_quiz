@@ -1,0 +1,13 @@
+package missingInteger;
+import java.util.*;
+
+public class integer {
+	public static void main(String []args)
+	{
+		   int size, number;
+		    Scanner in = new Scanner(System.in);
+
+		    System.out.println("Enter the nth values to input");
+		   
+	}
+}
